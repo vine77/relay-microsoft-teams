@@ -5,7 +5,7 @@ apiVersion: integration/v1
 kind: Integration
 
 # The integration slug. Required.
-name: microsoft
+name: microsoft-teams
 
 # The release channel for this integration. One of alpha, beta, rc or stable.
 # Optional. Defaults to stable.
@@ -41,8 +41,8 @@ owner:
   url: https://puppet.com
 
 # URL to this integration's Website. Optional.
-homepage: https://github.com/relay-integrations/microsoft
+homepage: https://github.com/relay-integrations/microsoft-teams
 
 # URL to this integration's source code. Optional. If the homepage is a GitHub
 # link, may be inferred automatically.
-source: git://github.com/relay-integrations/microsoft.git
+source: git://github.com/relay-integrations/microsoft-teams.git
