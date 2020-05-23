@@ -1,6 +1,6 @@
-# Microsoft integration
+# Microsoft Teams integration
 
-Integration with Microsoft for Puppet Relay.
+Integration with Microsoft Teams for Puppet Relay.
 
 ## External requirements
 
