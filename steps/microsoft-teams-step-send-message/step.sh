@@ -1,7 +1,11 @@
 #!/bin/sh
 
 MESSAGE=$(ni get -p '{.message}')
-WEBHOOK_URL=$(ni get -p '{.webhookURL}')
+WEBHOOK_URL=$(ni get -p '{.incomingWebhookURL}')
+
+if [ -z "${WEBHOOK_URL}" ]; then
+  WEBHOOK_URL=$(ni get -p '{.webhookURL}')
+fi
 
 if [ -z "${WEBHOOK_URL}" ]; then
   echo "No webhookURL specified"
