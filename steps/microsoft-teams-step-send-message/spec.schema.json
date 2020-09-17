@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "incomingWebhookURL": {
+        "type": "string",
+        "description": "An incoming webhook URL for the Microsoft Teams API"
+      },
+      "message": {
+        "type": "string",
+        "description": "The message to send."
+      }
+    },
+    "required": [
+      "incomingWebhookURL",
+      "message"
+    ],
+    "additionalProperties": false
+  }

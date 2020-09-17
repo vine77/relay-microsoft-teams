@@ -37,3 +37,8 @@ build:
 
 publish:
   repository: relaysh/microsoft-teams-step-send-message
+
+schemas: 
+  spec: 
+    source: file
+    file: spec.schema.json
