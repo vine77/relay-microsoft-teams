@@ -42,3 +42,14 @@ schemas:
   spec: 
     source: file
     file: spec.schema.json
+
+examples:
+- summary: Send a message
+  content:
+    apiVersion: v1
+    kind: Step
+    name: notify-teams
+    image: relaysh/microsoft-teams-step-send-message
+    spec:
+      message: !Parameter message 
+      incomingWebhookURL: !Connection { type: msteams, name: my-team }
