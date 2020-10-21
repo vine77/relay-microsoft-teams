@@ -4,23 +4,17 @@
   "properties": {
     "connection": {
       "type": "object",
-      "description": "A Microsoft Teams connection mapping.",
+      "x-relay-connectionType": "msteams",
+      "description": "A Relay Microsoft Teams connection",
       "properties": {
-        "connection": {
-          "type": "object",
-          "x-relay-connectionType": "msteams",
-          "description": "A Relay Microsoft Teams connection",
-          "properties": {
-            "incomingWebhookURL": {
-              "type": "string",
-              "description": "An incoming webhook URL for the Microsoft Teams API"
-            }
-          },
-          "required": [
-            "incomingWebhookURL"
-          ]
+        "incomingWebhookURL": {
+          "type": "string",
+          "description": "An incoming webhook URL for the Microsoft Teams API"
         }
-      }
+      },
+      "required": [
+        "incomingWebhookURL"
+      ]
     },
     "message": {
       "type": "string",
