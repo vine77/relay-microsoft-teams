@@ -1,14 +1,14 @@
 #!/bin/sh
 
 MESSAGE=$(ni get -p '{.message}')
-WEBHOOK_URL=$(ni get -p '{.incomingWebhookURL}')
+WEBHOOK_URL=$(ni get -p '{.connection.incomingWebhookURL}')
 
 if [ -z "${WEBHOOK_URL}" ]; then
   WEBHOOK_URL=$(ni get -p '{.webhookURL}')
 fi
 
 if [ -z "${WEBHOOK_URL}" ]; then
-  echo "No webhookURL specified"
+  echo "No incoming webhook url specified"
   exit 1
 fi
 if [ -z "${MESSAGE}" ]; then
