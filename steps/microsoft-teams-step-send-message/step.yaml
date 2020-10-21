@@ -52,4 +52,4 @@ examples:
     image: relaysh/microsoft-teams-step-send-message
     spec:
       message: !Parameter message 
-      incomingWebhookURL: !Connection { type: msteams, name: my-team }
+      connection: !Connection { type: msteams, name: my-team }

@@ -1,19 +1,36 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "type": "object",
-    "properties": {
-      "incomingWebhookURL": {
-        "type": "string",
-        "description": "An incoming webhook URL for the Microsoft Teams API"
-      },
-      "message": {
-        "type": "string",
-        "description": "The message to send."
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "connection": {
+      "type": "object",
+      "description": "A Microsoft Teams connection mapping.",
+      "properties": {
+        "connection": {
+          "type": "object",
+          "x-relay-connectionType": "msteams",
+          "description": "A Relay Microsoft Teams connection",
+          "properties": {
+            "incomingWebhookURL": {
+              "type": "string",
+              "description": "An incoming webhook URL for the Microsoft Teams API"
+            }
+          },
+          "required": [
+            "incomingWebhookURL"
+          ]
+        }
       }
     },
-    "required": [
-      "incomingWebhookURL",
-      "message"
-    ],
-    "additionalProperties": false
-  }
+    "message": {
+      "type": "string",
+      "description": "The message to send."
+    }
+  },
+  "required": [
+    "connection",
+    "message"
+  ],
+  "additionalProperties": false
+}
+
