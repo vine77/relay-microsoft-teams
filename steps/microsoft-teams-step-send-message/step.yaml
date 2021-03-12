@@ -24,6 +24,9 @@ description: This step sends a message to a Microsoft Teams channel.
 # action. Optional. Defaults to the integration icon.
 icon:
 
+# Quick steps show up at the top of the "Add step" modal
+quick: true
+
 # The mechanism to use to construct this step. Required. Must be an action
 # builder. See the Builders section below.
 build:
